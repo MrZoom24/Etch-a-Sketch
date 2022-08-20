@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+:root {
+    font-size: calc(100vw / 100);
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    background-color: #ededed;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
+.logo {
+    width: 12rem;
+    height: calc(12rem/4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Gugi', cursive;
+    font-size: 1.5rem;
+}
+
+.header--text {
+    background: linear-gradient(to right, #FF6E7F, #BFE9FF);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: black;
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.canvas-container{
+    display: flex;
+    justify-content: center;
+}
+
+.canvas {
+    width: 30rem;
+    height: 30rem;
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.canvas-grid {
+    text-align: center;
+}
+
+.color-options-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.color-picker {
+    box-sizing: border-box;
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    border: solid 0.3rem transparent;
+    border-radius: 30%;
+}
+
+.color-picker::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    margin: -0.5rem;
+    background: linear-gradient(to right, #FF6E7F, #BFE9FF);
+}
+
+.delete-options-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+.canvas-options-container {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.canvas-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.save-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ededed;
+    box-sizing: border-box;
+    width: 10rem;
+    height: 2.5rem;
+    border: solid 0.3rem transparent;
+    border-radius: 999rem;
+    position: relative;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.option::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    margin: -0.5rem;
+    background: linear-gradient(to right, #FF6E7F, #BFE9FF);
+}
+
+.option--active, .clear-mode:active, .save:active {
+    background: transparent;
+}
+
+.modal {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20rem;
+    margin-left: -20rem;
+    width: 40rem;
+    height: 40rem;
+    text-align: center;
+    background-color: #FF6E7F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10%;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: #464646;
+}
+
+.modal-background {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #bfe9ff8a;
+}
+
+.hidden {
+    display: none;
+}

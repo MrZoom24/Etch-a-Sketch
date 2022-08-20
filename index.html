@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <script src="./script.js" defer></script>
+    <link href="./style.css" rel="stylesheet">
+    <script src=
+"https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+    </script>
+</head>
+<body>
+    <div class="modal-background">
+        <div class="modal">
+            <p class="modal-title"><strong>To save image:</strong> right click image below --> save image as</p>
+        </div>
+    </div>
+    <main>
+        <div class="header">
+            <img src="./JK_logo.png" class="logo">
+            <h1 class="header--text">Etch-a-Sketch</h1>
+        </div>
+
+        <div class="canvas-container">
+            <div class="canvas"></div>
+        </div>
+
+        <div class="options-container">
+            <div class="color-options-container">
+                <input type="color" value="#555555" class="color-picker">
+                <div class="color-mode option">Color mode</div>
+                <div class="rainbow-mode option">Rainbow mode</div>
+            </div>
+
+            <div class="delete-options-container">
+                <div class="eraser-mode option">Eraser mode</div>
+                <div class="clear-mode option">Clear All</div>
+            </div>
+
+            <div class="canvas-options-container">
+                <div class="canvas-options">
+                    <div class="canvas-option-8 option">8x8</div>
+                    <div class="canvas-option-16 option">16x16</div>
+                </div>
+                <div class="canvas-options">
+                    <div class="canvas-option-32 option">32x32</div>
+                    <div class="canvas-option-64 option">64x64</div>
+                </div>
+            </div>
+
+            <div class="save-container">
+                <div class="save option">Save as image</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
